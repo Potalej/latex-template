@@ -16,6 +16,7 @@
 \RequirePackage{enumerate}
 \RequirePackage{setspace}
 \RequirePackage[T1]{fontenc}
+\RequirePackage{csquotes}
 
 % Computacao
 \RequirePackage{verbatim}
@@ -34,11 +35,21 @@
 \RequirePackage[math]{cellspace}
 
 % DEFINICOES, TEOREMAS, LEMAS, COROLARIOS
-\theoremstyle{definition}
 \newtheorem{definition}{Definição}[section]
+\newtheorem{observation}{Observação}[section]
+\newtheorem{proposition}{Proposição}[section]
 \newtheorem{theorem}{Teorema}[section]
 \newtheorem{lemma}[theorem]{Lema}
 \newtheorem{corollary}{Corolário}[theorem]
+\newtheorem{method}{Método}[section]
+
+% PARA QUESTOES
+\newtheorem*{questao*}{Questão}
+
+% PARA DEMONSTRACOES
+\newenvironment{Proof}[1][Demonstração]
+  {\proof[#1]\rightskip=1cm}
+  {\endproof}
 
 % VETOR, PRIMEIRA E SEGUNDA DERIVADAS DE VETOR
 \newcommand{\vet}[1]{\bm #1}
